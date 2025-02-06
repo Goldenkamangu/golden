@@ -23,7 +23,7 @@ body {
 /* Header styles */
 header {
     display: flex;
-    justify-content: space-between; /* Pushes logo left, menu right */
+    justify-content: space-between; /* Ensures logo stays left, menu stays right */
     align-items: center;
     padding: 1rem 2rem;
     background-color: #000;
@@ -31,11 +31,18 @@ header {
     width: 100%;
 }
 
+/* Logo stays on the left */
 header .logo {
-    display: flex; /* Ensures the logo stays on the left */
+    display: flex;
     align-items: center;
 }
 
+header .logo img {
+    height: 50px;
+    max-width: 100%;
+}
+
+/* Navigation stays on the right */
 header nav {
     display: flex;
 }
@@ -43,16 +50,32 @@ header nav {
 header nav ul {
     list-style: none;
     display: flex;
-}
-
-header nav ul li {
-    margin-left: 1.5rem;
+    justify-content: flex-end; /* Aligns menu items to the right */
+    gap: 1.5rem; /* Adds space between menu items */
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Make header responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Keeps logo left and menu right */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+        align-items: flex-end;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
 }
 
 /* Hero section */
