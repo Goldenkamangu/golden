@@ -5,6 +5,107 @@
     box-sizing: border-box;
 }
 
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    max-width: 100%;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Mobile Dropdown Menu */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FFD700;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: black;
+        width: 200px;
+        text-align: left;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        padding: 10px 20px;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        color: #FFD700;
+    }
+}
+
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Fix unwanted scrolling */
 html, body {
     width: 100%;
@@ -217,3 +318,11 @@ footer {
         padding: 3rem 1rem;
     }
 }
+
+.firm-name {
+    font-size: 1.8rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #ffffff; /* Matches the header text color */
+    text-transform: uppercase; /* Optional: makes the name uppercase */
+    font-style: oblique;
+  }
