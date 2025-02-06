@@ -23,26 +23,26 @@ body {
 /* Header styles */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes logo left, menu right */
     align-items: center;
     padding: 1rem 2rem;
     background-color: #000;
     color: #fff;
     width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
 }
 
-header .logo img {
-    height: 50px;
-    max-width: 100%;
+header .logo {
+    display: flex; /* Ensures the logo stays on the left */
+    align-items: center;
+}
+
+header nav {
+    display: flex;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 header nav ul li {
