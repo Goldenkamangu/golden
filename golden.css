@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 
-/* Prevent horizontal scrolling */
+/* Fix unwanted scrolling */
 html, body {
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* General styles */
@@ -28,6 +29,8 @@ header {
     background-color: #000;
     color: #fff;
     width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 header .logo img {
@@ -52,7 +55,7 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* Hero section styles */
+/* Hero section */
 .hero {
     background-color: #333;
     color: #fff;
@@ -64,7 +67,7 @@ header nav ul li a {
 
 .hero h1 {
     font-size: 3rem;
-    color: #FFD700; /* Gold color */
+    color: #FFD700;
 }
 
 .hero p {
@@ -82,12 +85,18 @@ header nav ul li a {
     display: inline-block;
 }
 
-/* Services section styles */
+/* Section styles */
+section {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+/* Services section */
 #services {
     padding: 4rem 2rem;
     background-color: #f8f8f8;
     text-align: center;
-    width: 100%;
 }
 
 #services h2 {
@@ -101,15 +110,14 @@ header nav ul li a {
 
 .service-item h3 {
     font-size: 1.5rem;
-    color: #FFD700; /* Gold color */
+    color: #FFD700;
 }
 
-/* Contact section styles */
+/* Contact section */
 #contact {
     padding: 4rem 2rem;
     background-color: #f8f8f8;
     text-align: center;
-    width: 100%;
 }
 
 #contact h2 {
@@ -161,7 +169,7 @@ header nav ul li a {
     background-color: #cfa900;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -170,14 +178,20 @@ footer {
     width: 100%;
 }
 
-/* Ensure sections don't overflow */
-section {
+/* Fix unwanted scrolling and white space */
+body {
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
     width: 100%;
     max-width: 100vw;
     overflow: hidden;
 }
 
-/* Responsive adjustments */
+/* Disable extra movement on mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -204,4 +218,8 @@ section {
     .hero p {
         font-size: 1rem;
     }
+
+    section {
+        padding: 3rem 1rem;
     }
+}
