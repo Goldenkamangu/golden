@@ -326,3 +326,86 @@ footer {
     text-transform: uppercase; /* Optional: makes the name uppercase */
     font-style: oblique;
   }
+
+
+  .my-portfolio {
+    padding: 40px;
+    /* You can override the default text alignment here without affecting global styles */
+    text-align: center;
+  }
+  
+  /* Portfolio Title */
+  .my-portfolio h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    /* Inherit or set your preferred color here */
+    color: inherit;
+  }
+  
+  /* Mobile Default: Vertical stacking */
+  .my-portfolio .portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  /* Card Styles */
+  .my-portfolio .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 90%;       /* Responsive width on mobile */
+    max-width: 300px; /* Maximum width for consistency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .my-portfolio .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .my-portfolio .card-content {
+    padding: 15px;
+  }
+  
+  .my-portfolio .card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: inherit;
+  }
+  
+  .my-portfolio .card-content p {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .my-portfolio .card-content a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .my-portfolio .card-content a:hover {
+    background-color: #FFD700;
+  }
+  
+  /* For larger screens: horizontal layout and right-aligned */
+  @media (min-width: 768px) {
+    .my-portfolio .portfolio {
+      flex-direction: row;       /* Horizontal layout */
+      flex-wrap: wrap;           /* Wrap if necessary */
+      justify-content: flex-end; /* Align cards to the right */
+    }
+    
+    .my-portfolio .card {
+      width: 300px; /* Fixed width on larger screens */
+    }
+  }
+  
