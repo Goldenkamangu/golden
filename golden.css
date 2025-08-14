@@ -513,4 +513,10 @@ footer {
         width: 95%;
         max-width: 350px;
     }
+
 }
+
+    .hero {
+      height: 100vh; /* Take up full viewport height on mobile */
+      padding: 2rem;
+    }
